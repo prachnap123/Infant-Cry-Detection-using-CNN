@@ -1,21 +1,47 @@
 # Infant-Cry-Detection-using-CNN
 
-# Overview
+# 👶 Infant Cry Classification Using CNN
 
-Infant Cry Detection using CNN is a deep learning-based system designed to classify different types of infant cries—such as hunger, pain, discomfort, or sleepiness—based on audio recordings. By converting audio into spectrograms, the system uses Convolutional Neural Networks (CNNs) to learn and detect emotional patterns in a baby's cry, enabling early intervention and better care.
+## 📌 Overview
 
-# Features
+This project focuses on classifying different types of infant cries using Convolutional Neural Networks (CNNs). By analyzing audio recordings from the [Infant Cry Audio Corpus](https://www.kaggle.com/datasets/warcoder/infant-cry), the model aims to distinguish between various cry types, facilitating better understanding and response to infants' needs.
 
-- Audio-based classification of infant cries
-- Spectrogram and MFCC feature extraction
-- CNN architecture trained on labeled cry audio
-- High accuracy and real-time prediction capability
-- Potential for smart baby monitors and healthcare support
+---
 
-# Implementation
+## ✨ Features
 
-- Audio Preprocessing: Convert raw .wav files into Mel-spectrograms or MFCCs
-- Model Architecture: A CNN designed to process spectrogram images
-- Training: Model trained using cross-entropy loss and Adam optimizer
-- Evaluation: Accuracy, precision, recall, and confusion matrix
-- Prediction: Real-time cry type prediction from new audio samples
+- 🎧 **Audio Data Preprocessing**: Converts raw audio files into Mel-frequency cepstral coefficients (MFCCs) for effective feature extraction.  
+- 🧠 **Deep Learning Model**: Implements a CNN architecture optimized for audio classification tasks.  
+- 📊 **Evaluation Metrics**: Assesses model performance using accuracy, precision, recall, and F1-score.  
+
+---
+
+## ⚙️ Implementation
+
+### 📁 Dataset
+- Uses the [Infant Cry Audio Corpus](https://www.kaggle.com/datasets/warcoder/infant-cry), consisting of labeled infant cry recordings.
+
+### 🔍 Preprocessing
+- **Feature Extraction**: Computes MFCCs from audio signals.
+- **Data Augmentation**: Applies techniques such as:
+  - Noise addition
+  - Time shifting
+
+### 🧱 Model Architecture
+- **Convolutional Layers**: Capture patterns in MFCCs.
+- **Pooling Layers**: Reduce dimensionality.
+- **Fully Connected Layers**: Perform final classification.
+
+### 🏋️ Training
+- **Loss Function**: Categorical Cross-Entropy
+- **Optimizer**: Adam
+- **Validation**: Uses a validation set to monitor overfitting
+
+### 📈 Evaluation
+- **Confusion Matrix**: Shows true vs. predicted labels
+- **Classification Report**: Includes precision, recall, and F1-score
+
+---
+
+
+
